@@ -1,0 +1,33 @@
+*{
+    border: 1px solid red;
+}
+
+header {
+    height: 67vh;
+    background-color: chocolate;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.header_text{
+    background-color: chartreuse;
+    height:50vh;
+    width: 45%
+}
+
+.header_pic{
+    background-color:cornflowerblue;
+    height:50vh;
+    width: 45%
+}
+
+h1 {
+    color: #4d1979;
+    background-color: aqua;
+}
+
+h2 {
+    color: #4d1979;
+    background-color: rgb(147, 99, 26);
+}
