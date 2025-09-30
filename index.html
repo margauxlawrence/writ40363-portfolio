@@ -72,61 +72,104 @@
         </section>
 
         <section class="projects-section" id="projects">
-            <h2>My Projects</h2>
+            <h2>My Projects</h>
             <div class="projects-container">
-                <article class="project-card">
-                    <div class="project-content">
-                        <h3>Promotional Brochure</h3>
-                        <p>Designed a multi-page, branded brochure in Adobe Indesign, focusing on layout, color, and typography.</p>
-                        <p><strong>Skills to learn:</strong> Indesign, branding, layout design</p>
-                    </div>
 
-                    <div class="about-image">
-                        <img src="images/Brochure.png" alt="Brochure about the various Strategic Communications clubs offered at TCU">
-                        <img src="images/Brochure2.png" alt="Brochure about the Various Strategic Communications clubs offered at TCU">
-                    </div>
-                </article>
+    <!-- Project 1 -->
+            <article class="project-card">
+            <div class="project-content">
+                <h3>Promotional Brochure</h3>
+                <p>Designed a multi-page, branded brochure in Adobe Indesign, focusing on layout, color, and typography.</p>
+                <p><strong>Skills to learn:</strong> Indesign, branding, layout design</p>
+            </div>
 
-                <article class="project-card">
-                    <div class="project-content">
-                        <h3>Event Marketing Flyer</h3>
-                        <p>Created a high-impact flyer to promote an event, emphasizing visual hierarchy and message clarity.</p>
-                        <p><strong>Skills to learn:</strong> Photoshop, creative marketing, visual storytelling</p>
-                    </div>
+            <div class="project-media project-gallery">
+                <button class="thumb" type="button" aria-label="Open brochure cover larger" onclick="openLightbox('images/Brochure.png')">
+                <img src="images/Brochure.png" alt="Brochure cover about Strategic Communications clubs at TCU" loading="lazy">
+                </button>
 
-                    <div class="about-image">
-                        <img src="images/MLProject1 copy.jpg" alt="Flyer about the STCO x Adobe MAX confrence attendance oppourtunity">
-                    </div>
-                </article>
+                <button class="thumb" type="button" aria-label="Open brochure interior larger" onclick="openLightbox('images/Brochure2.png')">
+                <img src="images/Brochure2.png" alt="Brochure interior spread about Strategic Communications clubs at TCU" loading="lazy">
+                </button>
+            </div>
+            </article>
 
-                <article class="project-card">
-                    <div class="project-content">
-                        <h3>Sports Story</h3>
-                        <p>Researched and designed a large-format poster exploring the origins and evolution of a chosen sport.</p>
-                        <p><strong>Skills used:</strong> Research, design, content organization</p>
-                    </div>
-                    <div class="about-image">
-                        <img src="images/Lawrence_Margaux_SportsStory (24 x 20 in).jpg" alt="Poster about the History of Basketball">
-                    </div>
-                </article>
+    <!-- Project 2 -->
+            <article class="project-card">
+            <div class="project-content">
+                <h3>Event Marketing Flyer</h3>
+                <p>Created a high-impact flyer to promote an event, emphasizing visual hierarchy and message clarity.</p>
+                 <p><strong>Skills to learn:</strong> Photoshop, creative marketing, visual storytelling</p>
+            </div>
 
-                <article class="project-card">
-                    <div class="project-content">
-                        <h3>Class Website Project</h3>
-                        <p>A simple website I built using HTML and CSS for this class.</p>
-                        <p><strong>Skills used:</strong> HTML, CSS, Flexbox</p>
-                    </div>
-                </article>
+            <div class="project-media">
+                <button class="thumb" type="button" aria-label="Open event flyer larger" onclick="openLightbox('images/MLProject1 copy.jpg')">
+                <img src="images/MLProject1 copy.jpg" alt="Flyer promoting STCO x Adobe MAX conference attendance opportunity" loading="lazy">
+                </button>
+             </div>
+            </article>
 
-                <article class="project-card">
-                    <div class="project-content">
-                        <h3>Future Project</h3>
-                        <p>A placeholder for a project I plan to build this semester.</p>
-                        <p><strong>Skills to learn:</strong> JavaScript, responsive design</p>
-                    </div>
-                </article>
+    <!-- Project 3 -->
+            <article class="project-card">
+            <div class="project-content">
+                <h3>Sports Story</h3>
+                <p>Researched and designed a large-format poster exploring the origins and evolution of a chosen sport.</p>
+                <p><strong>Skills used:</strong> Research, design, content organization</p>
+            </div>
+
+            <div class="project-media">
+                <button class="thumb" type="button" aria-label="Open basketball history poster larger" onclick="openLightbox('images/Lawrence_Margaux_SportsStory (24 x 20 in).jpg')">
+                <img src="images/Lawrence_Margaux_SportsStory (24 x 20 in).jpg" alt="Poster about the History of Professional Basketball in the United States" loading="lazy">
+                </button>
+            </div>
+            </article>
+
+    <!-- Project 4 -->
+            <article class="project-card">
+            <div class="project-content">
+                <h3>Class Website Project</h3>
+                <p>A simple website I built using HTML and CSS for this class.</p>
+                <p><strong>Skills used:</strong> HTML, CSS, Flexbox</p>
+            </div>
+    <!-- No media yet -->
+            </article>
+
+    <!-- Project 5 -->
+            <article class="project-card">
+            <div class="project-content">
+                <h3>Future Project</h3>
+                <p>A placeholder for a project I plan to build this semester.</p>
+                <p><strong>Skills to learn:</strong> JavaScript, responsive design</p>
+            </div>
+      <!-- No media yet -->
+            </article>
+
             </div>
         </section>
+
+        <section="contact-section" id="contact">
+            <h2>Contact Me</h2>
+            <p>If you'd like to get in touch, feel free to reach out via email or connect with me on LinkedIn!</p>
+            <ul class="contact-info">
+                <li>Email:  maggiejeanlaw@gmail.com</li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/margaux-lawrence" target="_blank">Margaux Lawrence</a></li>
+            </ul>
+        </section>
     </main>
+
+    <div id="lightbox" class="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img class="lightbox-content" id="lightbox-img">
+    </div>
+    <script>
+        function openLightbox(src) {
+        document.getElementById('lightbox').style.display = 'flex';
+        document.getElementById('lightbox-img').src = src;
+    }
+
+        function closeLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+    }
+    </script>
 </body>
 </html>
