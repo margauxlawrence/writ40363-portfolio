@@ -1,12 +1,14 @@
-/* ========== Brand palette ========== */
-:root{
-  --purple-dark: #4B2E83;   /* brand purple */
-  --purple-light: #C7B8EA;  /* accent lavender */
-  --page-bg: #F4F1FA;       /* VERY light purple for the whole page */
+/* ========== Brand palette (Calm & Natural with more purple) ========== */
+:root {
+  --lavender: #C7B8EA;     /* lavender accent */
+  --deep-purple: #6B4FA3;  /* richer purple for text/nav */
+  --sage: #9DBF9E;         /* calming secondary accent */
+  --beige-bg: #F9F8F6;     /* neutral background */
+  --charcoal: #2E2E2E;     /* dark text */
   --white: #FFFFFF;
-  --text-dark: #333333;
+  --text-dark: #2E2E2E;
   --text-muted: #555555;
-  --surface-border: #E8E2F4; /* subtle border on white cards */
+  --surface-border: #E2E2DD;
 }
 
 /* ========== Resets ========== */
@@ -16,12 +18,12 @@ body{
   font-family: system-ui, -apple-system, sans-serif;
   line-height: 1.6;
   color: var(--text-dark);
-  background: var(--page-bg);     /* make everything sit on light purple */
+  background: linear-gradient(90deg, #E9F4EC, #e7e1f4); 
 }
 
 /* ========== Navigation (white bar card) ========== */
 nav{
-  background-color: var(--white); /* white bar on purple background */
+  background-color: var(--white);
   padding: 1rem 2rem;
   border-bottom: 1px solid var(--surface-border);
   box-shadow: 0 2px 6px rgba(0,0,0,0.06);
@@ -31,7 +33,6 @@ nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0;                 /* nav already has padding */
   background: transparent;
   box-shadow: none;
 }
@@ -40,21 +41,21 @@ nav{
   font-size: 1.25rem;
   font-weight: bold;
   text-decoration: none;
-  color: var(--purple-dark);
+  color: var(--deep-purple);
 }
 
 .nav-links { display: flex; gap: 2rem; }
 
 nav a, .nav-links a{
   text-decoration: none;
-  color: var(--purple-dark);
+  color: var(--deep-purple);
   font-weight: 600;
 }
 
-nav a:hover, .nav-links a:hover{ color: var(--purple-light); }
-nav a:focus{ outline: 2px solid var(--purple-light); outline-offset: 2px; }
+nav a:hover, .nav-links a:hover{ color: var(--lavender); }
+nav a:focus{ outline: 2px solid var(--lavender); outline-offset: 2px; }
 
-/* ========== Header (white content card) ========== */
+/* ========== Header (lavender border card) ========== */
 header{
   display: flex; 
   align-items: center; 
@@ -66,12 +67,12 @@ header{
 }
 
 .header_text{
-  background-color: var(--white);  /* white card */
+  background-color: var(--white);
   color: var(--text-dark);
   flex: 1; 
   padding: 2rem;
   border-radius: 12px;
-  border: 1px solid var(--surface-border);
+  border: 6px solid var(--lavender); /* lavender border */
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
 
@@ -86,13 +87,13 @@ header{
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;   /* adds equal margin inside the box */
+  padding: 1.5rem;
 }
 
 .header_pic img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain; /* keeps whole photo visible */
+  object-fit: contain;
   border-radius: 12px;
 }
 
@@ -111,25 +112,21 @@ main{
 /* ========== Sections & headings ========== */
 section{ padding: 3rem 0; margin-bottom: 2rem; }
 
-/* --- Center the small underline directly under the words --- */
 section h2 {
   text-align: center;          
   font-size: 2.5rem;       
   margin: 0 0 3rem 0;
   position: relative;            
+  color: var(--deep-purple);
 }
 
 section h2::after {
   content: "";
-  position: static;                
-  left: auto; right: auto; bottom: auto;
-  transform: none;
-
   display: block;           
   width: 60px;                     
   height: 4px;
   margin: 0.75rem auto 0;   
-  background: linear-gradient(90deg, var(--purple-light), var(--purple-dark));
+  background: linear-gradient(90deg, var(--lavender), var(--sage));
   border-radius: 2px;
 }
 
@@ -137,12 +134,12 @@ section h2::after {
 p + p{ margin-top: 1rem; }
 
 h1{
-  color: var(--purple-dark);
+  color: var(--deep-purple);
   font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; line-height: 1.2;
 }
 
 h2{
-  font-size: 2rem; font-weight: 600; color: var(--purple-dark);
+  font-size: 2rem; font-weight: 600; color: var(--deep-purple);
   margin-bottom: 0.8rem; line-height: 1.3;
 }
 
@@ -193,9 +190,9 @@ p{ font-size: 1rem; margin-bottom: 1rem; color: var(--text-muted); }
   box-shadow: 0 2px 6px rgba(0,0,0,0.06);
 }
 
-.skill-card h3{ color: var(--purple-dark); margin-bottom: 0.5rem; }
+.skill-card h3{ color: var(--deep-purple); margin-bottom: 0.5rem; }
 
-/* ========== Projects (white cards) ========== */
+/* ========== Projects (lavender border cards) ========== */
 .projects-container{
   display: grid; grid-template-columns: 1fr; gap: 2rem; margin-top: 2rem;
 }
@@ -203,7 +200,7 @@ p{ font-size: 1rem; margin-bottom: 1rem; color: var(--text-muted); }
 
 .project-card{
   padding: 2rem; background: var(--white);
-  border: 1px solid var(--surface-border);
+  border: 6px solid var(--lavender); /* lavender border */
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
@@ -211,9 +208,9 @@ p{ font-size: 1rem; margin-bottom: 1rem; color: var(--text-muted); }
 .project-card:hover{
   transform: translateY(-2px);
   box-shadow: 0 8px 18px rgba(0,0,0,0.12);
-  border-color: var(--purple-light);
+  border-color: var(--deep-purple);
 }
-.project-card h3{ color: var(--purple-dark); margin-bottom: 1rem; }
+.project-card h3{ color: var(--deep-purple); margin-bottom: 1rem; }
 
 /* ========== Contact (white content card + button) ========== */
 .contact-section .contact-card{
@@ -241,10 +238,10 @@ p{ font-size: 1rem; margin-bottom: 1rem; color: var(--text-muted); }
 }
 
 .btn-primary{
-  background: var(--purple-dark); color: var(--white);
+  background: var(--deep-purple); color: var(--white);
 }
-.btn-primary:hover{ background: #3F2670; box-shadow: 0 6px 14px rgba(0,0,0,0.12); transform: translateY(-1px); }
-.btn-primary:focus{ outline: 3px solid var(--purple-light); outline-offset: 2px; }
+.btn-primary:hover{ background: var(--lavender); box-shadow: 0 6px 14px rgba(0,0,0,0.12); transform: translateY(-1px); }
+.btn-primary:focus{ outline: 3px solid var(--sage); outline-offset: 2px; }
 .btn-primary:active{ transform: translateY(0); box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
 
 /* ========== Footer widths to match ========== */
@@ -287,7 +284,7 @@ footer{ max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
 .thumb:hover img, .thumb:focus img{ transform: scale(1.03); }
 .thumb:hover, .thumb:focus{
   box-shadow: 0 8px 18px rgba(0,0,0,0.12);
-  outline: 2px solid var(--purple-dark); outline-offset: 2px;
+  outline: 2px solid var(--deep-purple); outline-offset: 2px;
 }
 .thumb::after{
   content: "Click to enlarge";
