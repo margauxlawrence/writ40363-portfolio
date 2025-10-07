@@ -276,6 +276,22 @@ p{
   margin: 0 auto;     /* keeps them centered */
 }
 
+.project-media .slides-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.project-media .slides-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* ========== Contact (white content card + button) ========== */
 .contact-section .contact-card{
   max-width: 720px; margin: 0 auto;
